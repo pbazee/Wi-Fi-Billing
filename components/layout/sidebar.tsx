@@ -29,6 +29,7 @@ export function Sidebar() {
 
   return (
     <>
+      {/* Desktop Sidebar */}
       <aside className="glass fixed left-4 top-4 hidden h-[calc(100vh-2rem)] w-64 rounded-3xl p-4 lg:block">
         <p className="mb-6 px-2 text-lg font-semibold neon-heading">PeterPay WiFi</p>
         <nav className="space-y-1">
@@ -38,7 +39,7 @@ export function Sidebar() {
             return (
               <Link
                 key={item.href}
-                href={item.href as any}
+                href={item.href as any}           // ← fixed here (already was)
                 className={cn(
                   "flex items-center gap-3 rounded-xl px-3 py-2 text-sm transition",
                   active
@@ -61,6 +62,7 @@ export function Sidebar() {
         </button>
       </aside>
 
+      {/* Mobile Bottom Nav */}
       <div className="glass fixed bottom-3 left-3 right-3 z-40 rounded-2xl px-2 py-1 lg:hidden">
         <div className="grid grid-cols-6 gap-1">
           {filtered.slice(0, 5).map((item) => {
@@ -69,7 +71,7 @@ export function Sidebar() {
             return (
               <Link
                 key={item.href}
-                href={item.href}
+                href={item.href as any}           // ← THIS WAS MISSING – now added
                 className={cn("rounded-lg p-2", active ? "bg-cyan-400/20" : "hover:bg-white/10")}
                 aria-label={item.label}
               >
