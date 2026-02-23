@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 225 35% 8%;
+  --foreground: 210 40% 98%;
+  --card: 222 38% 12%;
+  --card-foreground: 210 40% 96%;
+  --primary: 189 100% 55%;
+  --primary-foreground: 222 47% 10%;
+  --border: 215 25% 24%;
+  --muted: 220 30% 14%;
+  --muted-foreground: 215 20% 65%;
+}
+
+.light {
+  --background: 210 50% 98%;
+  --foreground: 224 71% 4%;
+  --card: 0 0% 100%;
+  --card-foreground: 224 71% 4%;
+  --primary: 221 83% 53%;
+  --primary-foreground: 210 40% 98%;
+  --border: 214 32% 91%;
+  --muted: 210 40% 96%;
+  --muted-foreground: 215 16% 47%;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground min-h-screen antialiased;
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(34, 211, 238, 0.1), transparent 40%),
+    radial-gradient(circle at 80% 0%, rgba(168, 85, 247, 0.12), transparent 35%),
+    linear-gradient(135deg, rgba(5, 8, 20, 1), rgba(8, 14, 32, 1));
+}
+
+.neon-heading {
+  @apply bg-gradient-to-r from-cyan-300 via-cyan-400 to-purple-500 bg-clip-text text-transparent;
+}
+
+.glass {
+  @apply border border-white/10 bg-black/30 backdrop-blur-xl shadow-2xl;
+}
+
+.grid-bg {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+  background-size: 34px 34px;
+}
+
+.glitch {
+  text-shadow: 0.03em 0 0 #22d3ee, -0.03em -0.02em 0 #a855f7;
+  animation: glitch 1.6s infinite;
+}
+
+@keyframes glitch {
+  0%, 100% { transform: translate(0); }
+  20% { transform: translate(-1px, 1px); }
+  40% { transform: translate(1px, -1px); }
+  60% { transform: translate(-1px, 0); }
+  80% { transform: translate(1px, 1px); }
+}
