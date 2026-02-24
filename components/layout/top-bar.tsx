@@ -15,7 +15,7 @@ export function TopBar() {
   return (
     <header className="glass sticky top-4 z-30 mx-3 flex items-center justify-between rounded-2xl px-4 py-3 lg:ml-[18rem] lg:mr-4">
       <div>
-        <p className="text-xs text-muted-foreground">PeterPay WiFi Control Plane</p>
+        <p className="text-xs text-muted-foreground">Best Net WiFi Connect Control Plane</p>
         <p className="text-sm font-medium">{new Date().toLocaleString()}</p>
       </div>
 

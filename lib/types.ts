@@ -40,3 +40,15 @@ export type Redemption = {
   reward: string;
   time: string;
 };
+
+export type NetworkUser = {
+  id: string;
+  phoneOrUsername: string;
+  activePackage: string;
+  dataUsedMb: number;
+  dataRemainingMb: number;
+  connectedSince: string;
+  deviceMac: string;
+  deviceIp: string;
+  status: "Active" | "Expired";
+};

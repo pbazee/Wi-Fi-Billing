@@ -1,4 +1,4 @@
-import type { LoyaltyUser, PackageItem, Redemption, RouterItem, Tenant } from "@/lib/types";
+import type { LoyaltyUser, NetworkUser, PackageItem, Redemption, RouterItem, Tenant } from "@/lib/types";
 
 export const demoUsers = {
   super_admin: {
@@ -87,3 +87,16 @@ export function tierBreakdown() {
     Gold: Math.round((gold / total) * 100),
   };
 }
+
+export const networkUsers: NetworkUser[] = [
+  { id: "u1", phoneOrUsername: "254712100001", activePackage: "Power Hour", dataUsedMb: 420, dataRemainingMb: 580, connectedSince: "08:12 AM", deviceMac: "A4:5E:60:12:99:01", deviceIp: "10.1.11.24", status: "Active" },
+  { id: "u2", phoneOrUsername: "sarah.k", activePackage: "All Day Max", dataUsedMb: 1820, dataRemainingMb: 3180, connectedSince: "07:40 AM", deviceMac: "BC:91:2B:FA:11:02", deviceIp: "10.1.11.31", status: "Active" },
+  { id: "u3", phoneOrUsername: "254733200003", activePackage: "Quick Browse", dataUsedMb: 260, dataRemainingMb: 0, connectedSince: "09:05 AM", deviceMac: "10:3D:1C:8F:AA:03", deviceIp: "10.1.12.19", status: "Expired" },
+  { id: "u4", phoneOrUsername: "kevin.m", activePackage: "Half Day Plus", dataUsedMb: 940, dataRemainingMb: 1060, connectedSince: "06:58 AM", deviceMac: "F0:9F:C2:45:10:04", deviceIp: "10.1.12.25", status: "Active" },
+  { id: "u5", phoneOrUsername: "254701300005", activePackage: "Power Hour", dataUsedMb: 600, dataRemainingMb: 400, connectedSince: "10:11 AM", deviceMac: "CC:5B:76:20:99:05", deviceIp: "10.2.10.14", status: "Active" },
+  { id: "u6", phoneOrUsername: "linda.n", activePackage: "Quick Browse", dataUsedMb: 210, dataRemainingMb: 0, connectedSince: "10:33 AM", deviceMac: "44:22:91:09:70:06", deviceIp: "10.2.10.23", status: "Expired" },
+  { id: "u7", phoneOrUsername: "254745400007", activePackage: "All Day Max", dataUsedMb: 2240, dataRemainingMb: 2760, connectedSince: "05:51 AM", deviceMac: "08:7A:4C:B1:66:07", deviceIp: "10.2.11.8", status: "Active" },
+  { id: "u8", phoneOrUsername: "denis.w", activePackage: "Half Day Plus", dataUsedMb: 1300, dataRemainingMb: 700, connectedSince: "08:49 AM", deviceMac: "2C:E4:12:AB:42:08", deviceIp: "10.2.11.16", status: "Active" },
+  { id: "u9", phoneOrUsername: "254799500009", activePackage: "Power Hour", dataUsedMb: 510, dataRemainingMb: 490, connectedSince: "09:57 AM", deviceMac: "50:ED:3C:01:7B:09", deviceIp: "10.3.10.11", status: "Active" },
+  { id: "u10", phoneOrUsername: "mina.g", activePackage: "Quick Browse", dataUsedMb: 300, dataRemainingMb: 0, connectedSince: "11:02 AM", deviceMac: "34:AE:99:CD:22:10", deviceIp: "10.3.10.27", status: "Expired" },
+];

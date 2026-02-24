@@ -20,8 +20,8 @@ type AuthContextType = {
 };
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
-const STORAGE_KEY = "peterpay-auth";
-const TENANT_KEY = "peterpay-selected-tenant";
+const STORAGE_KEY = "bestnet-auth";
+const TENANT_KEY = "bestnet-selected-tenant";
 
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<AuthUser | null>(null);

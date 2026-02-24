@@ -26,7 +26,7 @@ export default function CaptivePortalDemoPage() {
               <Wifi className="h-5 w-5 text-cyan-300" />
             </div>
             <div>
-              <p className="text-lg font-semibold neon-heading">PeterPay WiFi</p>
+              <p className="text-lg font-semibold neon-heading">Best Net WiFi Connect</p>
               <p className="text-xs text-muted-foreground">Customer Captive Portal Demo</p>
             </div>
           </div>
@@ -40,7 +40,7 @@ export default function CaptivePortalDemoPage() {
                 <GlassCard key={pkg.id} className={`cursor-pointer p-4 ${selected.id === pkg.id ? "ring-1 ring-cyan-400/50" : ""}`}>
                   <button onClick={() => setSelected(pkg)} className="w-full text-left">
                     <p className="font-semibold">{pkg.name}</p>
-                    <p className="text-xs text-muted-foreground">{pkg.durationMin} min • {pkg.speedMbps} Mbps</p>
+                    <p className="text-xs text-muted-foreground">{pkg.durationMin} min - {pkg.speedMbps} Mbps</p>
                     <p className="mt-2 text-xl font-bold neon-heading">KSh {pkg.priceKsh}</p>
                   </button>
                 </GlassCard>
@@ -65,7 +65,9 @@ export default function CaptivePortalDemoPage() {
             <GlassCard className="p-5 text-center">
               <p className="text-sm text-muted-foreground">Payment successful. Internet session is active.</p>
               <p className="mt-2 text-2xl font-semibold neon-heading">Welcome online</p>
-              <p className="mt-1 text-sm">Loyalty points earned: <span className="text-cyan-300">+{Math.max(10, selected.priceKsh / 2)} pts</span></p>
+              <p className="mt-1 text-sm">
+                Loyalty points earned: <span className="text-cyan-300">+{Math.max(10, selected.priceKsh / 2)} pts</span>
+              </p>
             </GlassCard>
             <SessionTimer totalSeconds={selected.durationMin * 60} />
             <GlassCard className="p-4 text-sm text-muted-foreground">

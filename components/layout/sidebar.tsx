@@ -1,13 +1,14 @@
 "use client";
 
 import Link from "next/link";
+import type { Route } from "next";
 import { usePathname } from "next/navigation";
-import { Home, Router, Package, Award, Building2, Settings, LogOut } from "lucide-react";
+import { Home, Router, Package, Users, Award, Building2, Settings, LogOut } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { useAuth } from "@/contexts/auth-context";
 
 type Item = {
-  href: string;
+  href: Route;
   label: string;
   icon: React.ComponentType<{ className?: string }>;
   superOnly?: boolean;
@@ -18,6 +19,7 @@ const items: Item[] = [
   { href: "/tenants", label: "Tenants", icon: Building2, superOnly: true },
   { href: "/routers", label: "Routers", icon: Router },
   { href: "/packages", label: "Packages", icon: Package },
+  { href: "/users", label: "Users", icon: Users },
   { href: "/loyalty", label: "Loyalty", icon: Award },
   { href: "/settings", label: "Settings", icon: Settings },
 ];
@@ -29,9 +31,8 @@ export function Sidebar() {
 
   return (
     <>
-      {/* Desktop Sidebar */}
       <aside className="glass fixed left-4 top-4 hidden h-[calc(100vh-2rem)] w-64 rounded-3xl p-4 lg:block">
-        <p className="mb-6 px-2 text-lg font-semibold neon-heading">PeterPay WiFi</p>
+        <p className="mb-6 px-2 text-lg font-semibold neon-heading">Best Net WiFi Connect</p>
         <nav className="space-y-1">
           {filtered.map((item) => {
             const Icon = item.icon;
@@ -39,7 +40,7 @@ export function Sidebar() {
             return (
               <Link
                 key={item.href}
-                href={item.href as any}           // ← fixed here (already was)
+                href={item.href}
                 className={cn(
                   "flex items-center gap-3 rounded-xl px-3 py-2 text-sm transition",
                   active
@@ -62,7 +63,6 @@ export function Sidebar() {
         </button>
       </aside>
 
-      {/* Mobile Bottom Nav */}
       <div className="glass fixed bottom-3 left-3 right-3 z-40 rounded-2xl px-2 py-1 lg:hidden">
         <div className="grid grid-cols-6 gap-1">
           {filtered.slice(0, 5).map((item) => {
@@ -71,7 +71,7 @@ export function Sidebar() {
             return (
               <Link
                 key={item.href}
-                href={item.href as any}           // ← THIS WAS MISSING – now added
+                href={item.href}
                 className={cn("rounded-lg p-2", active ? "bg-cyan-400/20" : "hover:bg-white/10")}
                 aria-label={item.label}
               >

@@ -40,7 +40,7 @@ export default function LoginPage() {
             <div className="mx-auto mb-3 flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400/30 to-purple-500/30">
               <Wifi className="h-6 w-6 text-cyan-300" />
             </div>
-            <CardTitle className="text-3xl neon-heading">PeterPay WiFi</CardTitle>
+            <CardTitle className="text-3xl neon-heading">Best Net WiFi Connect</CardTitle>
             <CardDescription>Sign in to your 2028 control plane</CardDescription>
           </CardHeader>
           <CardContent>

@@ -14,8 +14,8 @@ export default function SettingsPage() {
         <Card>
           <CardHeader><CardTitle>Brand & Notification Preferences</CardTitle></CardHeader>
           <CardContent className="grid gap-3 md:grid-cols-2">
-            <Input placeholder="Brand name" defaultValue="PeterPay WiFi" />
-            <Input placeholder="Support email" defaultValue="support@peterpaywifi.com" />
+            <Input placeholder="Brand name" defaultValue="Best Net WiFi Connect" />
+            <Input placeholder="Support email" defaultValue="support@bestnetwificonnect.com" />
             <Input placeholder="M-Pesa shortcode" defaultValue="123456" />
             <Input placeholder="Auto-disconnect timeout (min)" defaultValue="10" />
             <div className="md:col-span-2">

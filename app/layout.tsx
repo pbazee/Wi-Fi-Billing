@@ -3,7 +3,7 @@ import "./globals.css";
 import { Providers } from "@/components/providers";
 
 export const metadata: Metadata = {
-  title: "PeterPay WiFi",
+  title: "Best Net WiFi Connect",
   description: "Futuristic SaaS WiFi billing platform prototype",
 };
 
